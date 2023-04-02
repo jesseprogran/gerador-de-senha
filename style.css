@@ -37,7 +37,7 @@ img {
 }
 
 body {
- background-image: url("images/body.jpg") ;
+ /* background-image: url("images/body.jpg"); */
  background-repeat: no-repeat;
  background-size: cover;
  padding: 2rem;
@@ -64,4 +64,34 @@ main {
   font-size: 1.7rem;
   font-family: 'Edu NSW ACT Foundation', cursive;
   color: #525050;
+}
+
+.box {
+  background: #fbf9f9;
+  box-shadow: 0 1px 2px 1px rgb(211, 200, 200);
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.password {
+  display: flex;
+}
+
+.password .text {
+  flex: 1;
+}
+
+.password .text input {
+  font-family: 'Inconsolata', monospace;
+  font-size: 3rem;
+  border: none;
+  outline: none;
+  cursor: default;
+  height: 52px;
+  width: 100%;
+  transition: all 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
