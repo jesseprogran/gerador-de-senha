@@ -4,24 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerador de Senha JS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Gerador de Senha</h1>
-    <p>Ultilize o nosso Gerador online pra criar uma senha Forte e Segura.</p>
+    <main>
+      <section class="hero">
+        <h1 class="title">Gerador de Senha</h1>
+        <p class="subtitle">
+          Ultilize o nosso Gerador online pra criar uma senha Forte e Segura.
+        </p>
+      </section>
 
-    <input type="text" name="password" id="password" />
+      <input type="text" name="password" id="password" />
 
-    <input
-      type="range"
-      name="password-length"
-      id="password-length"
-      value="20"
-      max="60"
-      min="3"
-    />
+      <input
+        type="range"
+        name="password-length"
+        id="password-length"
+        value="20"
+        max="60"
+        min="3"
+      />
 
-    <button>Copiar Senha</button>
+      <button>Copiar Senha</button>
+    </main>
 
     <script src="script.js"></script>
   </body>
