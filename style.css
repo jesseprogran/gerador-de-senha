@@ -293,7 +293,7 @@ svg {
   left: 0;
   top: 0;
   fill: none;
-  stroke: #fff;
+  stroke: #ffffff;
   stroke-dasharray: 150 480;
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
