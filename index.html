@@ -64,28 +64,36 @@
             />
           </div>
           <div class="config">
-            <label  class="checkbox-container">
+            <label class="checkbox-container">
               <span class="text">Maiúsculas</span>
-              <input type="checkbox" id="uppercase-check" checked>
+              <input type="checkbox" id="uppercase-check" checked />
               <span class="checkmark"></span>
             </label>
 
-            <label  class="checkbox-container">
+            <label class="checkbox-container">
               <span class="text">Números</span>
-              <input type="checkbox" id="number-check" checked>
+              <input type="checkbox" id="number-check" checked />
               <span class="checkmark"></span>
             </label>
 
-            <label  class="checkbox-container">
+            <label class="checkbox-container">
               <span class="text">Símbolos</span>
-              <input type="checkbox" id="symbol-check" checked>
+              <input type="checkbox" id="symbol-check" checked />
               <span class="checkmark"></span>
             </label>
           </div>
         </div>
       </section>
 
-      <button>Copiar Senha</button>
+      <div class="center">
+        <button class="btn">
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+          <span>Copiar Senha</span>
+        </button>
+      </div>
     </main>
 
     <script src="script.js"></script>
