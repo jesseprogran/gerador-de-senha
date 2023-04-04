@@ -7,4 +7,10 @@ function generatePassword() {
     const numberRandom = Math.floor(Math.random() * chars.length);
     password += chars.substring(numberRandom, numberRandom + 1);
   }
+
+  const elInput = document.querySelector("#password");
+  elInput.value = password
+
 }
+
+generatePassword()
