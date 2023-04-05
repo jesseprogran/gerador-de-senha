@@ -1,31 +1,55 @@
 const elInput = document.querySelector("#password");
-let passwordLength = 20
+const upperCaseCheckEl = document.querySelector("#uppercase-check");
+const numberCheckEl = document.querySelector("#number-check");
+const symbolCheckEl = document.querySelector("#symbol-check");
+
+let passwordLength = 20;
 
 function generatePassword() {
-  const chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ1234567889?!@&*$()[]";
+  let chars = "abcdefghjkmnpqrstuvwxyz";
 
-  let password = ""
+  const upperCaseChars = "ABCDEFGHJKMNPQRSTUVWXYZ";
+  const numberChars = "1234567889";
+  const symbolChars = "?!@&*$()[]";
+
+  if (upperCaseCheckEl.checked) {
+    chars += upperCaseChars;
+  }
+
+  if (numberCheckEl.checked) {
+    chars += numberChars;
+  }
+
+  if (symbolCheckEl.checked) {
+     chars += symbolChars;
+  }
+
+  let password = "";
 
   for (let i = 0; i < passwordLength; i++) {
     const numberRandom = Math.floor(Math.random() * chars.length);
     password += chars.substring(numberRandom, numberRandom + 1);
   }
 
-  elInput.value = password
-
+  elInput.value = password;
 }
 
 function copy() {
-  navigator.clipboard.writeText(elInput.value)
+  navigator.clipboard.writeText(elInput.value);
 }
 
 const passwordLengthEl = document.querySelector("#password-length");
-passwordLengthEl.addEventListener("input", function() {
-  passwordLength = passwordLengthEl.value
+passwordLengthEl.addEventListener("input", function () {
+  passwordLength = passwordLengthEl.value;
+  document.querySelector("#password-length-text").innerText = passwordLength
   generatePassword();
-})
+});
+
+upperCaseCheckEl.addEventListener("click", generatePassword);
+numberCheckEl.addEventListener("click", generatePassword);
+symbolCheckEl.addEventListener("click", generatePassword);
 
 const copyButtonEl = document.querySelector("#button");
 copyButtonEl.addEventListener("click", copy);
 
-generatePassword() 
+generatePassword();
