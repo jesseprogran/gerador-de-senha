@@ -2,6 +2,7 @@ const elInput = document.querySelector("#password");
 const upperCaseCheckEl = document.querySelector("#uppercase-check");
 const numberCheckEl = document.querySelector("#number-check");
 const symbolCheckEl = document.querySelector("#symbol-check");
+const securityIndicatorBarEl = document.querySelector("#security-indicator-bar");
 
 let passwordLength = 20;
 
@@ -32,6 +33,14 @@ function generatePassword() {
   }
 
   elInput.value = password;
+  calculateQuality()
+
+}
+
+function calculateQuality() {
+  const percent = Math.round((passwordLength / 64) * 100)
+
+  securityIndicatorBarEl.style.width = `${percent}%`
 }
 
 function copy() {
