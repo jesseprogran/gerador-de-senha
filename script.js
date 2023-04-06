@@ -41,6 +41,27 @@ function calculateQuality() {
   const percent = Math.round((passwordLength / 64)  * 0.25 + (upperCaseCheckEl.checked ? 15 : 0) + (numberCheckEl.checked ? 25 : 0 ) + (symbolCheckEl.checked ? 55 : 0))
 
   securityIndicatorBarEl.style.width = `${percent}%`
+
+  if (percent > 64) {
+    securityIndicatorBarEl.classList.remove("critical")
+    securityIndicatorBarEl.classList.remove("warning")
+    securityIndicatorBarEl.classList.add("safe")
+  } else if (percent > 45) {
+    securityIndicatorBarEl.classList.remove("critical")
+    securityIndicatorBarEl.classList.add("warning")
+    securityIndicatorBarEl.classList.remove("safe")
+  } else {
+    securityIndicatorBarEl.classList.add("critical")
+    securityIndicatorBarEl.classList.remove("warning")
+    securityIndicatorBarEl.classList.remove("safe")
+  }
+
+  if (percent > 100) {
+    securityIndicatorBarEl.classList.add("completed");
+  } else {
+    securityIndicatorBarEl.classList.remove("completed");
+
+  }
 }
 
 function copy() {
