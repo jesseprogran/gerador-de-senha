@@ -4,6 +4,9 @@ const numberCheckEl = document.querySelector("#number-check");
 const symbolCheckEl = document.querySelector("#symbol-check");
 const securityIndicatorBarEl = document.querySelector("#security-indicator-bar");
 
+const copyButtonEl = document.querySelector("#button");
+copyButtonEl.addEventListener("click", copy);
+
 let passwordLength = 20;
 
 function generatePassword() {
@@ -100,7 +103,6 @@ upperCaseCheckEl.addEventListener("click", generatePassword);
 numberCheckEl.addEventListener("click", generatePassword);
 symbolCheckEl.addEventListener("click", generatePassword);
 
-const copyButtonEl = document.querySelector("#button");
-copyButtonEl.addEventListener("click", copy);
+document.querySelector("#renew").addEventListener("click", generatePassword)
 
 generatePassword();
